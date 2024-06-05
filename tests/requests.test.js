@@ -30,6 +30,15 @@ describe("requests.js", () => {
 
     it("should make a GET request to the appropriate URL", async () => {
       // Write code here
+      jest.spyOn(axios, "get");
+
+  await index();
+  
+  const expectedURL = `${BASE_URL}/constellations`;
+  expect(axios.get).toHaveBeenCalledWith(expectedURL);
+
+  jest.clearAllMocks();
+});
       expect(1).toBe(2);
     });
 
