@@ -56,7 +56,8 @@ expect(1).toBe(2);
 
   jest.clearAllMocks();
 });
-     
+ expect(1).toBe(2);
+    });    
 
     it("should log an error to the console", async () => {
       // Write code here
@@ -73,6 +74,9 @@ expect(1).toBe(2);
 
   jest.clearAllMocks();
 }); 
-      
+expect(1).toBe(2);
+    });
+  });
+});      
 
 
