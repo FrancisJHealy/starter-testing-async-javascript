@@ -29,7 +29,7 @@ describe("requests.js", () => {
     ];
 
     it("should make a GET request to the appropriate URL", async () => {
-      // Write code here
+      
       jest.spyOn(axios, "get");
 
   await index();
