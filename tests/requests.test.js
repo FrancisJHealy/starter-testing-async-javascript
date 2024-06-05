@@ -38,7 +38,7 @@ describe("requests.js", () => {
   expect(axios.get).toHaveBeenCalledWith(expectedURL);
 
   jest.clearAllMocks();
-      expect(1).toBe(2);
+     
 });
     
 
@@ -55,8 +55,7 @@ describe("requests.js", () => {
 
   jest.clearAllMocks();
 });
-      expect(1).toBe(2);
-    });
+     
 
     it("should log an error to the console", async () => {
       // Write code here
@@ -73,7 +72,6 @@ describe("requests.js", () => {
 
   jest.clearAllMocks();
 }); 
-      expect(1).toBe(2);
-    });
+      
   });
 });
