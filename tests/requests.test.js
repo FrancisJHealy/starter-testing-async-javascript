@@ -38,16 +38,41 @@ describe("requests.js", () => {
   expect(axios.get).toHaveBeenCalledWith(expectedURL);
 
   jest.clearAllMocks();
+      expect(1).toBe(2);
 });
     
 
     it("should return a list of constellations with fewer than 10 stars with planets", async () => {
       // Write code here
+      it("should return a list of constellations with fewer than 10 stars with planets", async () => {
+  jest.spyOn(axios, "get");
+  axios.get.mockImplementation(() => Promise.resolve({ data }));
+
+  const response = await index();
+
+  const expected = data.slice(0, 2);
+  expect(response).toEqual(expected);
+
+  jest.clearAllMocks();
+});
       expect(1).toBe(2);
     });
 
     it("should log an error to the console", async () => {
       // Write code here
+     jest.spyOn(axios, "get");
+  axios.get.mockImplementation(() =>
+    Promise.reject(new Error("Request failed."))
+  );
+  
+  jest.spyOn(console, "error");
+
+  await index();
+
+  expect(console.error).toHaveBeenCalledWith("Request failed.");
+
+  jest.clearAllMocks();
+}); 
       expect(1).toBe(2);
     });
   });
