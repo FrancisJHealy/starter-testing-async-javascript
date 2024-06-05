@@ -40,8 +40,7 @@ describe("requests.js", () => {
   jest.clearAllMocks();
      
 });
-expect(1).toBe(2);
-    });    
+
 
     it("should return a list of constellations with fewer than 10 stars with planets", async () => {
       // Write code here
